@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,57 +6,77 @@
   text-decoration: none;
 }
 
-body{
+body {
+  background-color: #000;
+  height: 100vh;
+}
+
+/* interface */
+.interface {
   max-width: 1200px;
   margin: 0 auto;
-
+}
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* header */
-header{
-  background-color: #010D26;
+header {
+  background-color: #010d26;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
-header .lucas-contato button{
+
+header .lucas-contato button {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #04D9D9;
+  background-color: #04d9d9;
   border: 0;
-  border-radius: 30px;
-  
+  border-radius: 40px;
+  cursor: pointer;
 }
 
-header h1{
+header h1 {
   color: #ffffff;
   font-size: 2.5rem;
 }
 
-header span{
-  color:#04D9D9 ;
+header span {
+  color: #04d9d9;
+}
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
 }
 
-header .navegacao-primaria{
-display: flex;
-gap: 10px;
-align-items: center;
-
+header nav ul {
+  list-style-type: none;
 }
 
-header .navegacao-primaria li a{
-  padding: 10px;
-  color: #04D9D9;
-  font-size: 1.3rem;
+header nav ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
 
+
+header a:hover{
+  color: #04d9d9;
+  transform: scale(1.1);
+  tansition: 0.3s;
+}
+header .lucas-contato button:hover{
+  box-shadow: 0 0 8px #04d9d9ce;
 }
 
 /* DOWLOAD CV SECAO */
-.section-div{
-  background-color:#00040D ;
+.section-div {
+  background-color: #00040d;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
@@ -65,27 +85,26 @@ header .navegacao-primaria li a{
   padding: 60px;
 }
 
-.section-div div{
+.section-div div {
   margin-top: 120px;
   align-self: start;
   display: grid;
   gap: 30px;
 }
 
-.section-div h2{
-   font-family:Arial, Helvetica, sans-serif ;
-   font-weight: 600;
-   color: #ffffff;
+.section-div h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.section-div div p{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.section-div div p {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 200;
   color: white;
-
 }
 
-.section-div div a{
+.section-div div a {
   justify-self: start;
   color: white;
   padding: 15px 40px;
