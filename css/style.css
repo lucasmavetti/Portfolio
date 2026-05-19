@@ -7,8 +7,6 @@
 }
 
 body {
-  background-color: #000;
-  height: 100vh;
 }
 
 /* interface */
@@ -49,7 +47,7 @@ header h1 {
 header span {
   color: #04d9d9;
 }
-header a{
+header a {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
@@ -64,18 +62,18 @@ header nav ul li {
   padding: 0 40px;
 }
 
-
-header a:hover{
+header a:hover {
   color: #04d9d9;
   transform: scale(1.1);
-  tansition: 0.3s;
+  transition: 0.3s;
 }
-header .lucas-contato button:hover{
+header .lucas-contato button:hover {
   box-shadow: 0 0 8px #04d9d9ce;
 }
 
 /* DOWLOAD CV SECAO */
 .section-div {
+  animation: inicializar 0.7s forwards;
   background-color: #00040d;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -112,3 +110,43 @@ header .lucas-contato button:hover{
   border: 2px solid white;
 }
 
+.section-div img {
+  max-width: 100%;
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.digitando::after {
+  content: "|";
+  margin-left: 5px;
+  animation: pisca 0.5s infinite;
+}
+
+@keyframes pisca {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes inicializar {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
