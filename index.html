@@ -2,7 +2,6 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,13 +34,6 @@
       <!--interface-->
       <div class="interface">
         <h1>Lucas <span>Mavetti</span></h1>
-        <div class="logo">
-          <!--logo-->
-          <a href="#">
-            <!-- <img src="images/home.png" alt="home"> -->
-          </a>
-        </div>
-        <!--FIM logo-->
 
         <nav aria-label="Menu principal" class="menu_desktop">
           <ul class="nav justify-content-center">
@@ -51,13 +43,23 @@
             <li class="align-middle"><a href="#">Projetos</a></li>
           </ul>
         </nav>
+
         <i class="bi bi-three-dots-vertical"></i>
       </div>
-      <!--  fim da interface -->
-    </header>
-    <!--fim header barra inicio-->
 
-    <section aria-label="seção cirriculo dowload Lucas" class="section-div">
+      <!-- menu mobile -->
+      <nav class="menu_mobile" aria-label="Menu mobile">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Especialidades</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Projetos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--fim header-->
+
+    <section aria-label="seção currículo download Lucas" class="section-div">
       <div>
         <h2>Ola eu sou o Lucas</h2>
         <h2 class="digitando">Ainda nao pensei no texto tmj</h2>
@@ -72,14 +74,14 @@
 
       <img src="images/bbb.png" alt="eu" class="img-fluid" />
     </section>
-    <!--fim seção dowload-->
+    <!--fim seção download-->
 
     <main>
       <article aria-label="seção sobre mim" class="sobre">
         <div class="sobre_titulo">
           <h1>Sobre mim</h1>
           <p>Parte Pessoal</p>
-          <div aria-label="Seção apenas de ilutrações de botões">
+          <div aria-label="Seção apenas de ilustrações de botões">
             <span></span>
             <span></span>
             <span></span>
@@ -103,17 +105,14 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
               nobis blanditiis excepturi veniam? Libero, illo rem. Laudantium
               totam quis eaque sequi repellat, ex quae expedita nisi reiciendis
-              incidunt, magnam iure. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. C um inventore id, autem reprehenderit harum eos
-              consectetur obcaecati voluptatem dolor error, temporibus maxime,
-              facilis vel nostrum fug iat voluptatum libero eaque porro.
+              incidunt, magnam iure.
             </p>
           </div>
           <div class="sobre_info">
             <p><i class="fa-solid fa-calendar-days"></i>11 de Maio de 2002</p>
             <p><i class="fa-sharp fa-solid fa-laptop-code"></i>Atividades</p>
             <p><i class="fa-solid fa-location-dot"></i>Sarandi-PR, Brasil</p>
-            <p><i class="fa-sharp fa-solid fa-globe"></i> BRASIL LINGAUFEM</p>
+            <p><i class="fa-sharp fa-solid fa-globe"></i> BRASIL LINGUAGEM</p>
             <p><i class="fa-solid fa-flag"></i>BRASIL</p>
             <p>
               <i class="fa-solid fa-phone-volume"></i>telefone: +55 (44)9
@@ -128,18 +127,19 @@
       </article>
     </main>
     <!--fim sobre parte pessoal-->
+
     <section class="serviços">
       <div class="sobre_titulo">
         <h1>Sobre mim</h1>
         <p>Parte Profissional</p>
-        <div aria-label="Seção apenas de ilutrações de botões">
+        <div aria-label="Seção apenas de ilustrações de botões">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
       <div class="meu_serviço">
-        <ul aria-label="Navegaçao secundaria">
+        <ul aria-label="Navegação secundária">
           <li>
             <i class="bi bi-award"></i>
             <h3>HTML</h3>
@@ -197,35 +197,63 @@
           <span></span>
         </div>
         <div class="port">
-          <div class="img-port" style="background-image: url(images/teste\ 1.jpeg)">
+          <div
+            class="img-port"
+            style="background-image: url(&quot;images/teste 1.jpeg&quot;)"
+          >
             <div class="overlay">Projeto 1</div>
           </div>
-          <div class="img-port" style="background-image: url(images/teste\ 2.png)">
+          <div
+            class="img-port"
+            style="background-image: url(&quot;images/teste 2.png&quot;)"
+          >
             <div class="overlay">Projeto 2</div>
           </div>
-          <div class="img-port" style="background-image: url(images/teste\ 1.jpeg)">
+          <div
+            class="img-port"
+            style="background-image: url(&quot;images/teste 1.jpeg&quot;)"
+          >
             <div class="overlay">Projeto 3</div>
           </div>
         </div>
       </div>
     </section>
 
-   <section class="formulario">
+    <section class="formulario">
       <div class="sobre_titulo">
         <h1>entre em contato</h1>
-        
       </div>
       <div aria-label="Entre em contato">
         <form action="">
-          <input type="text" name="" id="" placeholder="Seu nome:" required>
-          <input type="email" name="" id="" placeholder="Seu e-mail:" required>
-          <input type="text" name="" id="" placeholder="Seu celular:">
-          <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
-          <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+          <input type="text" placeholder="Seu nome:" required />
+          <input type="email" placeholder="Seu e-mail:" required />
+          <input type="text" placeholder="Seu celular:" />
+          <textarea placeholder="Sua mensagem:" required></textarea>
+          <div class="btn-enviar"><input type="submit" value="Enviar" /></div>
         </form>
-        
-        
       </div>
     </section>
+
+    <footer>
+      <div class="interface">
+<div class="line-footer">
+  <div class="logoflex">
+          <div class="logo-footer">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+
+          <div class="btn-social">
+            <a href="#"><button><i class="bi bi-github"></i></button></a>
+            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+          </div>
+          
+        </div>
+        </div>
+</div>
+        <div class="line-footer borda">
+          <p><i class="bi bi-envelope"></i> <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+        </div>
+      </div>
+    </footer>
   </body>
-</html>  
+</html>

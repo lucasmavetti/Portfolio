@@ -10,11 +10,22 @@ body {
   background-color: #00040d;
   margin: 0px;
 }
-button:hover, form .btn-enviar input:hover {
+button:hover,
+form .btn-enviar input:hover {
   box-shadow: 0 0 8px #89dfdfce;
   transform: scale(1.05);
 }
-
+.btn-social {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  background-color: #04d9d9;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.3s;
+}
 /* interface */
 .interface {
   max-width: 1200px;
@@ -33,6 +44,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 header .lucas-contato button {
@@ -75,6 +87,40 @@ header a:hover {
 }
 header .lucas-contato button:hover {
   box-shadow: 0 0 8px #04d9d9ce;
+}
+
+/* ícone hambúrguer — escondido no desktop */
+header .bi-three-dots-vertical,
+header .bi-x {
+  display: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* menu mobile — oculto por padrão */
+.menu_mobile {
+  display: none;
+  background-color: #00040d;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.menu_mobile ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.menu_mobile ul li a {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.menu_mobile.aberto {
+  display: block;
 }
 
 /* ------------------------DOWLOAD CV SECAO----------------------- */
@@ -301,7 +347,7 @@ main .sobre {
 
 .serviços {
   margin-top: -20px;
-  padding: 60px 00px;
+  padding: 60px 0px;
   background-color: #001034;
 }
 
@@ -326,7 +372,7 @@ main .sobre {
   display: grid;
   gap: 30px;
   text-align: center;
-  max-width: 300px;
+  width: 280px;
   align-content: center;
   height: 300px;
   background-color: rgb(73, 73, 73);
@@ -389,6 +435,7 @@ main .sobre {
 .meu_serviço li:hover {
   transform: scale(1.02);
 }
+
 /* ----------------------------------estilo do portfólio---------------------------- */
 section.portfolio {
   padding: 80px 4%;
@@ -397,14 +444,14 @@ section.portfolio {
 .port {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
-}
-section.portfolio .port {
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .img-port {
   width: 360px;
+  max-width: 100%;
   height: 460px;
   background-size: cover;
   background-position: 100% 0%;
@@ -437,8 +484,9 @@ section.portfolio .port {
 .overlay:hover {
   opacity: 1;
 }
-/* -----------------------------------------formulario---------------------------------------------------------- */
-section .formulario {
+
+/* -----------------------------------------formulario---------------------------------------- */
+section.formulario {
   padding: 80px 4%;
 }
 form {
@@ -472,34 +520,61 @@ form .btn-enviar input {
   background-color: #04d9d9;
   color: #1a1a1a;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
+}
+/* ---------------------------------rodape------------------------------ */
+.logoflex {
+  display: flex;
+}
+footer {
+  padding: 60px 4%;
+  box-shadow: 0 0 40px 10px #a8a8a82a;
 }
 
+footer .logoflex {
+  justify-content: space-between;
+}
+footer .line-footer {
+  padding: 20px 0;
+
+}
+.borda{
+  border-top: 2px solid #04d9d9;
+}
+footer .line-footer p i {
+  color: #04d9d9;
+  font-size: 22px;
+}
+footer .line-footer p a{
+  color: #ffffff;
+}
 /* ----------------------responsivo---------------------------------- */
 
 @media (max-width: 992px) {
   /* HEADER */
   header > .interface {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
   }
+
   header .menu_desktop {
     display: none;
   }
-  header i {
-    color: #ffffff;
-    font-size: 3rem;
+
+  /* mostra o ícone hambúrguer */
+  header .bi-three-dots-vertical,
+  header .bi-x {
     display: block;
   }
 
-  header nav ul li {
-    padding: 0 15px;
-  }
+  /* HERO */
   .section-div {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 40px 20px;
+    gap: 30px;
   }
   .section-div div {
     margin-top: 20px;
@@ -509,18 +584,24 @@ form .btn-enviar input {
     justify-self: center;
   }
   .section-div img {
-    width: 80%;
+    width: 70%;
+    max-width: 320px;
     margin: 0 auto;
   }
+
+  /* SOBRE */
   main .sobre {
     grid-template-columns: 1fr;
     padding: 20px;
   }
   .sobre img {
     grid-row: auto;
+    width: 80%;
+    max-width: 300px;
     margin: 0 auto;
   }
   .sobre_conteudo {
+    grid-column: 1/-1;
     grid-template-columns: 1fr;
   }
   .sobre_texto {
@@ -533,10 +614,63 @@ form .btn-enviar input {
     font-size: 1rem;
     line-height: 1.6;
   }
+
+  /* SERVIÇOS */
+  .meu_serviço {
+    padding: 20px;
+  }
   .meu_serviço ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+  }
+  .meu_serviço ul li {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* PORTFOLIO */
+  .img-port {
+    width: 100%;
+    max-width: 380px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-div img {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  /* Serviços em coluna única no celular */
+  .meu_serviço ul {
+    grid-template-columns: 1fr;
+  }
+  .meu_serviço ul li {
+    height: 220px;
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Portfolio em coluna única */
+  .img-port {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .sobre_texto h1 {
+    font-size: 1.6rem;
+  }
+
+  form {
+    padding: 0 10px;
   }
 }
