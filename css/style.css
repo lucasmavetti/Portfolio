@@ -10,8 +10,7 @@ body {
   background-color: #00040d;
   margin: 0px;
 }
-button:hover,
-form .btn-enviar input:hover {
+button:hover,form .btn-enviar input:hover {
   box-shadow: 0 0 8px #89dfdfce;
   transform: scale(1.05);
 }
@@ -206,7 +205,7 @@ header .bi-x {
 /* ------------------SEÇÃO PRINCIPAL SOBRE MIM -----------------*/
 
 main {
-  background-color: #000a21;
+  background-color: #121212;
   color: wheat;
 }
 
@@ -234,7 +233,7 @@ main .sobre {
 }
 
 .sobre_titulo p {
-  color: #19e946;
+  color: #efefef;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   position: relative;
@@ -251,7 +250,7 @@ main .sobre {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: blueviolet;
+  background-color:#04d9d9a4;
 }
 
 .sobre img {
@@ -272,7 +271,7 @@ main .sobre {
   animation: sobeSecao 0.6s ease-in-out forwards;
   grid-column: 2/-1;
   display: grid;
-  color: rgb(144, 245, 42);
+  color:#efefef;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -289,7 +288,7 @@ main .sobre {
 }
 
 .sobre_texto h1::after {
-  background-color: aqua;
+  background-color:#04d9d9a4;
   height: 6px;
   width: 60px;
   margin: 20px 0;
@@ -314,7 +313,7 @@ main .sobre {
 }
 
 .sobre_info i {
-  color: brown;
+  color: #04d9d9a4;
   display: inline-block;
   padding-right: 15px;
   font-size: 1.5rem;
@@ -348,12 +347,12 @@ main .sobre {
 .serviços {
   margin-top: -20px;
   padding: 60px 0px;
-  background-color: #001034;
+  background-color: #111111;
 }
 
 .meu_serviço {
   padding: 60px;
-  color: aliceblue;
+  color: #efefef;
 }
 
 .meu_serviço ul {
@@ -375,23 +374,23 @@ main .sobre {
   width: 280px;
   align-content: center;
   height: 300px;
-  background-color: rgb(73, 73, 73);
+  background-color: #272727
 }
 
 .meu_serviço ul li i {
   font-size: 1rem;
-  color: aqua;
+  color:#04d9d9a4
 }
 
 .meu_serviço ul li h3 {
-  color: black;
+  color: #d6d8dc;
   font-size: 1.6rem;
   font-family: "Times New Roman", Times, serif;
   font-weight: 500;
 }
 
 .meu_serviço ul li p {
-  color: rgb(14, 183, 206);
+  color: #efefef;
   font-size: 1.1rem;
 }
 
