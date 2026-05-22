@@ -1,4 +1,3 @@
-// Efeito de digitação
 function ativaLetra(elemento) {
   const arrTexto = elemento.innerHTML.split("");
   elemento.innerHTML = "";
@@ -7,12 +6,11 @@ function ativaLetra(elemento) {
       elemento.innerHTML += letra;
     }, 75 * i);
   });
+  
 }
 
-function escreverLetra(elemento) {
-  const titulo = document.querySelector(".digitando");
-  ativaLetra(titulo);
-}
+const titulo = document.querySelector(".digitando");
+ativaLetra(titulo);
 
 // Menu mobile
 const btnMenu = document.querySelector(".bi-three-dots-vertical, .bi-x");

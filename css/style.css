@@ -7,11 +7,12 @@
 }
 
 body {
-  background-color: #00040d;
+  background-color: #0b0e0d;
   margin: 0px;
 }
-button:hover,form .btn-enviar input:hover {
-  box-shadow: 0 0 8px #89dfdfce;
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0 0 8px #00ff99c5;
   transform: scale(1.05);
 }
 .btn-social {
@@ -19,7 +20,7 @@ button:hover,form .btn-enviar input:hover {
   height: 60px;
   border-radius: 50px;
   border: none;
-  background-color: #04d9d9;
+  background-color: #00ff99;
   font-size: 22px;
   cursor: pointer;
   margin: 0 5px;
@@ -38,7 +39,7 @@ header > .interface {
 
 /* ---------------------------header --------------------------------*/
 header {
-  background-color: #00040d;
+  background-color: #0b0e0d;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -50,7 +51,7 @@ header .lucas-contato button {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #04d9d9;
+  background-color: #00ff99;
   border: 0;
   border-radius: 40px;
   cursor: pointer;
@@ -62,7 +63,7 @@ header h1 {
 }
 
 header span {
-  color: #04d9d9;
+  color: #00ff99;
 }
 header a {
   color: #ffffff;
@@ -80,12 +81,12 @@ header nav ul li {
 }
 
 header a:hover {
-  color: #04d9d9;
+  color: #00ff99;
   transform: scale(1.1);
   transition: 0.3s;
 }
 header .lucas-contato button:hover {
-  box-shadow: 0 0 8px #04d9d9ce;
+  box-shadow: 0 0 8px #00ff99c5;
 }
 
 /* ícone hambúrguer — escondido no desktop */
@@ -100,7 +101,7 @@ header .bi-x {
 /* menu mobile — oculto por padrão */
 .menu_mobile {
   display: none;
-  background-color: #00040d;
+  background-color: #0b0e0d;
   width: 100%;
   padding: 10px 0;
 }
@@ -125,7 +126,7 @@ header .bi-x {
 /* ------------------------DOWLOAD CV SECAO----------------------- */
 .section-div {
   animation: inicializar 0.7s forwards;
-  background-color: #00040d;
+  background-color: #0b0e0d;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
@@ -205,8 +206,8 @@ header .bi-x {
 /* ------------------SEÇÃO PRINCIPAL SOBRE MIM -----------------*/
 
 main {
-  background-color: #121212;
-  color: wheat;
+  background-color: #0b0e0d;
+  color: #e8f5e9;
 }
 
 main .sobre {
@@ -227,13 +228,13 @@ main .sobre {
 
 .sobre_titulo h1 {
   font-size: 2.5rem;
-  color: #04d9d9;
+  color: #00ff99;
   margin-bottom: 15px;
   font-family: fantasy;
 }
 
 .sobre_titulo p {
-  color: #efefef;
+  color: #e8f5e9;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   position: relative;
@@ -250,7 +251,7 @@ main .sobre {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color:#04d9d9a4;
+  background-color: #00ff99b6;
 }
 
 .sobre img {
@@ -271,7 +272,7 @@ main .sobre {
   animation: sobeSecao 0.6s ease-in-out forwards;
   grid-column: 2/-1;
   display: grid;
-  color:#efefef;
+  color: #ffffff;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -283,12 +284,12 @@ main .sobre {
 
 .sobre_texto h1 {
   font-size: 2.3rem;
-  color: #ffffff;
+  color: #e8f5e9;
   grid-column: 1/-1;
 }
 
 .sobre_texto h1::after {
-  background-color:#04d9d9a4;
+  background-color: #00ff99b6;
   height: 6px;
   width: 60px;
   margin: 20px 0;
@@ -313,7 +314,7 @@ main .sobre {
 }
 
 .sobre_info i {
-  color: #04d9d9a4;
+  color: #00ff99b6;
   display: inline-block;
   padding-right: 15px;
   font-size: 1.5rem;
@@ -347,7 +348,7 @@ main .sobre {
 .serviços {
   margin-top: -20px;
   padding: 60px 0px;
-  background-color: #111111;
+  background-color: #0b0e0d;
 }
 
 .meu_serviço {
@@ -374,30 +375,30 @@ main .sobre {
   width: 280px;
   align-content: center;
   height: 300px;
-  background-color: #272727
+  background-color: #111815;
 }
 
 .meu_serviço ul li i {
   font-size: 1rem;
-  color:#04d9d9a4
+  color: #00ff99b6;
 }
 
 .meu_serviço ul li h3 {
-  color: #d6d8dc;
+  color: #ffffff;
   font-size: 1.6rem;
   font-family: "Times New Roman", Times, serif;
   font-weight: 500;
 }
 
 .meu_serviço ul li p {
-  color: #efefef;
+  color: #e2f8e4;
   font-size: 1.1rem;
 }
 
 .meu_serviço li::before {
   content: "";
   transition: 0.5s ease-in-out;
-  border-radius: 6px;
+  border-radius: 1px;
   width: 0px;
   height: 0px;
   position: absolute;
@@ -409,7 +410,7 @@ main .sobre {
 .meu_serviço li::after {
   content: "";
   transition: 0.5s ease-in-out;
-  border-radius: 6px;
+  border-radius: 1px;
   width: 0px;
   height: 0px;
   position: absolute;
@@ -422,14 +423,14 @@ main .sobre {
 .meu_serviço li:hover::before {
   width: 100%;
   height: 100%;
-  border-top: 2px solid #a04e02;
-  border-right: 2px solid #a04e02;
+  border-top: 4px solid #00ff99b6;
+  border-right: 4px solid #00ff99b6;
 }
 .meu_serviço li:hover::after {
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #a04e02;
-  border-left: 2px solid #a04e02;
+  border-bottom: 4px solid #00ff99b6;
+  border-left: 4px solid #00ff99b6;
 }
 .meu_serviço li:hover {
   transform: scale(1.02);
@@ -438,7 +439,7 @@ main .sobre {
 /* ----------------------------------estilo do portfólio---------------------------- */
 section.portfolio {
   padding: 80px 4%;
-  box-shadow: 0 0 40px 10px #a8a8a82a;
+  box-shadow: 0 0 40px 10px #0b0e0d;
 }
 .port {
   display: flex;
@@ -454,7 +455,7 @@ section.portfolio {
   height: 460px;
   background-size: cover;
   background-position: 100% 0%;
-  transition: 8s;
+  transition: 5s;
   cursor: pointer;
   border-radius: 40px;
   position: relative;
@@ -499,7 +500,7 @@ form {
 form input,
 form textarea {
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a83;
   border: 0;
   outline: 0;
   padding: 20px 15px;
@@ -516,7 +517,7 @@ form .btn-enviar {
 }
 form .btn-enviar input {
   width: 120px;
-  background-color: #04d9d9;
+  background-color: #00ff99;
   color: #1a1a1a;
   cursor: pointer;
   transition: 0.2s;
@@ -527,24 +528,28 @@ form .btn-enviar input {
 }
 footer {
   padding: 60px 4%;
-  box-shadow: 0 0 40px 10px #a8a8a82a;
+  box-shadow: 0 0 40px 10px #111815;
 }
 
 footer .logoflex {
   justify-content: space-between;
 }
+
+footer .logoflex a {
+  justify-content:center;
+  align-items: center;
+}
 footer .line-footer {
   padding: 20px 0;
-
 }
-.borda{
-  border-top: 2px solid #04d9d9;
+.borda {
+  border-top: 2px solid #00ff99;
 }
 footer .line-footer p i {
-  color: #04d9d9;
+  color: #00ff99;
   font-size: 22px;
 }
-footer .line-footer p a{
+footer .line-footer p a {
   color: #ffffff;
 }
 /* ----------------------responsivo---------------------------------- */
