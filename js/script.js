@@ -8,7 +8,18 @@ function ativaLetra(elemento) {
   });
   
 }
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    const navHeight = document.querySelector('nav').offsetHeight;
 
+    window.scrollTo({
+      top: target.offsetTop - navHeight, // compensa a navbar fixa
+      behavior: 'smooth'
+    });
+  });
+});
 const titulo = document.querySelector(".digitando");
 ativaLetra(titulo);
 
