@@ -11,6 +11,11 @@ html {
 body {
   background-color: #0b0e0d;
   margin: 0px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
 }
 button:hover,
 form .btn-enviar input:hover {
@@ -20,13 +25,16 @@ form .btn-enviar input:hover {
 .btn-social {
   width: 60px;
   height: 60px;
-  border-radius: 50px;
+  border-radius: 50%;
   border: none;
   background-color: #00ff99;
   font-size: 22px;
   cursor: pointer;
-  margin: 0 5px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0e0d;
 }
 /* interface */
 .interface {
@@ -46,7 +54,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .lucas-contato button {
@@ -145,14 +155,12 @@ header .bi-x {
 }
 
 .section-div h2 {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: #ffffff;
 }
 
 .section-div div p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
 }
 
@@ -232,7 +240,6 @@ main .sobre {
   font-size: 2.5rem;
   color: #00ff99;
   margin-bottom: 15px;
-  font-family: fantasy;
 }
 
 .sobre_titulo p {
@@ -359,11 +366,9 @@ main .sobre {
 }
 
 .meu_serviço ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .meu_serviço ul li {
@@ -374,7 +379,7 @@ main .sobre {
   display: grid;
   gap: 30px;
   text-align: center;
-  width: 280px;
+  width: 100%;
   align-content: center;
   height: 300px;
   background-color: #111815;
@@ -388,7 +393,6 @@ main .sobre {
 .meu_serviço ul li h3 {
   color: #ffffff;
   font-size: 1.6rem;
-  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
 }
 
@@ -446,7 +450,7 @@ section.portfolio {
 .port {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   padding: 20px;
   justify-content: center;
 }
@@ -527,19 +531,24 @@ form .btn-enviar input {
 /* ---------------------------------rodape------------------------------ */
 .logoflex {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo-footer h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.logo-footer h2 span {
+  color: #00ff99;
 }
 footer {
   padding: 60px 4%;
   box-shadow: 0 0 40px 10px #111815;
-}
-
-footer .logoflex {
-  justify-content: space-between;
-}
-
-footer .logoflex a {
-  justify-content:center;
-  align-items: center;
 }
 footer .line-footer {
   padding: 20px 0;
