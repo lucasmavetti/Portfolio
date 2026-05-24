@@ -24,22 +24,35 @@ if (iconMenu && menuMobile) {
 }
 
 // Smooth scroll compensando header sticky
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => {
+document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
+    const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
-    const headerHeight = document.querySelector('header').offsetHeight;
+    const headerHeight = document.querySelector("header").offsetHeight;
     window.scrollTo({
       top: target.offsetTop - headerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
     // Fecha o menu mobile ao clicar em um link
-    if (menuMobile) menuMobile.classList.remove('aberto');
+    if (menuMobile) menuMobile.classList.remove("aberto");
     if (iconMenu) {
-      iconMenu.classList.add('bi-three-dots-vertical');
-      iconMenu.classList.remove('bi-x');
+      iconMenu.classList.add("bi-three-dots-vertical");
+      iconMenu.classList.remove("bi-x");
     }
   });
 });
 
+function enviarWhats(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const mensagem = document.getElementById("mensagem").value;
+  const telefone = "5544998081038";
+
+  const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+  const msgFormatada = encodeURIComponent(texto);
+
+  const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+  window.open(url, "_blank");
+}

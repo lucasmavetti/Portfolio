@@ -442,15 +442,8 @@ main .sobre {
   transform: scale(1.02);
 }
 
- .progresso {
-  background-color: #0b0e0d;
-}
-  .progress{
-    background-color: #a01111b6;
-  }
-  .progress-bar{
-    background-color: #00ff99;
-  }
+
+
 
 /* ----------------------------------estilo do portfólio---------------------------- */
 section.portfolio {
