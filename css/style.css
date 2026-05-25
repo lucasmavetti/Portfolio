@@ -94,7 +94,7 @@ header nav ul {
 
 header nav ul li {
   display: inline-block;
-  padding: 0 40px;
+  padding: 0 18px;
 }
 
 header a:hover {
@@ -720,7 +720,7 @@ footer .line-footer p a {
     grid-template-columns: 1fr;
     padding: 20px;
   }
-  .sobre img {
+  .img-borda {
     grid-row: auto;
     width: 80%;
     max-width: 300px;
