@@ -4,18 +4,23 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-} 
+}
 html {
   scroll-behavior: smooth;
 }
 body {
   background-color: #0b0e0d;
   margin: 0px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
 }
 button:hover,
 form .btn-enviar input:hover {
@@ -263,13 +268,40 @@ main .sobre {
   background-color: #00ff99b6;
 }
 
-.sobre img {
-  animation: ladoSecao 0.6s ease-in-out forwards;
-  cursor: pointer;
+.img-borda {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 5px;
+  overflow: hidden;
   grid-row: 2;
+  width: 100%;
   max-width: 100%;
-  border-radius: 4px;
+  animation: ladoSecao 0.6s ease-in-out forwards;
+}
+
+.img-borda::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(#00ff99, #00bfff, #fff, #00ff99, #00bfff);
+  animation: girarBorda 3s linear infinite;
+}
+
+.sobre img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
   filter: blur(0);
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes girarBorda {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .sobre img:hover {
@@ -441,10 +473,86 @@ main .sobre {
 .meu_serviço li:hover {
   transform: scale(1.02);
 }
-
-
-
-
+/* -------- Flip Card -------- */
+.meu_serviço ul li.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  padding: 0;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 6px;
+}
+.flip-card.virado .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-frente,
+.flip-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 6px;
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+  padding: 20px;
+}
+.flip-frente {
+  background-color: #111815;
+}
+.icones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.flip-verso {
+  background-color: #111815;
+  transform: rotateY(180deg);
+  border: 1px solid #00ff9940;
+}
+.flip-verso i {
+  font-size: 1.4rem;
+  color: #00ff99b6;
+}
+.flip-verso h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+.nivel-texto {
+  color: #e2f8e4;
+  font-size: 1rem;
+  margin: 0;
+}
+.nivel-texto strong {
+  color: #00ff99b6;
+}
+.barra-nivel {
+  width: 80%;
+  margin: 0 auto;
+  height: 6px;
+  background-color: #15e487;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.barra-preenchimento {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff99b6, #00cc77);
+  border-radius: 10px;
+}
+.porcentagem {
+  color: #00ff99b6;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 /* ----------------------------------estilo do portfólio---------------------------- */
 section.portfolio {
   padding: 80px 4%;
